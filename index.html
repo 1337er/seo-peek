@@ -93,7 +93,7 @@
         }
 
         try {
-          if (localStorage.sourceSansPro) {
+          if (localStorage.sourceSansProSP) {
             // The font is in localStorage, we can load it directly
             addFont();
           } else {
@@ -104,7 +104,7 @@
             request.onload = function() {
               if (request.status >= 200 && request.status < 400) {
                 // We save the file in localStorage
-                localStorage.sourceSansPro = request.responseText;
+                localStorage.sourceSansProSP = request.responseText;
 
                 // ... and load the font
                 addFont();
